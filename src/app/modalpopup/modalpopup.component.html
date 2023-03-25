@@ -1,0 +1,27 @@
+<div mat-dialog-content>
+  <form [formGroup]="bookForm"  class="form">
+    <p>Please give us info about book</p>
+    <div>
+      <label for="Name">Name</label>
+      <input formControlName="name" id="text"  >
+    </div>
+    <div>
+      <label for="Description">Description</label>
+      <input formControlName="description" id="description"  >
+    </div>
+    <div>
+      <label for="Page Count">Page Count</label>
+      <input formControlName="pageCount" id="pageCount"  >
+    </div>
+    <div>
+      <label for="Public Date">Public Date</label>
+      <input type="Date" formControlName="name" id="publicDate"  >
+
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" [disabled]="bookForm.invalid" (click)="createBook()">Add Book</button>
+      <button mat-raised-button color="warn" (click)="Closepopup()" >Close</button>
+    </div>
+  </form>
+</div>
+
